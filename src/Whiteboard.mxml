@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<s:Application xmlns:fx="http://ns.adobe.com/mxml/2009"
+			   xmlns:s="library://ns.adobe.com/flex/spark"
+			   xmlns:mx="library://ns.adobe.com/flex/mx"
+			   minWidth="955" minHeight="600" xmlns:local="*">
+
+<fx:Declarations>
+
+</fx:Declarations>
+
+<s:HGroup width="100%" height="100%">
+	
+	<mx:TabNavigator width="30%" height="100%">
+		
+		<mx:VBox label="Chat">
+		</mx:VBox>
+		
+		<mx:VBox label="Users">
+		</mx:VBox>
+		
+		<mx:VBox label="Toolbox">
+			
+			<mx:ColorPicker change="board.drawColor = event.target.selectedColor"/>
+			<s:Button label="Erase" click="board.erase()"/>
+			
+		</mx:VBox>
+		
+	</mx:TabNavigator>
+	
+	<local:Board id="board" width="70%" height="100%"/>
+	
+</s:HGroup>
+
+
+
+</s:Application>
